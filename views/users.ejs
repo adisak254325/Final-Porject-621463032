@@ -1,0 +1,42 @@
+<%- include("_header") -%>
+<div class="m-3">
+    <h1>Data of User</h1>
+    <div class="text-end">
+    <a class="btn btn-sm btn-success mb-2" href="/create">Add</a></div>
+    <div class="table-responsive-sm">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr class="text-center">
+                    <th>ID</th>
+                    <th>USERNAME</th>
+                    <th>PASSWORD</th>
+                    <th>NAME</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (const user of model) { %>
+                    <tr  class="text-center">
+                        <td>
+                            <%= user.id %>
+                        </td>
+                        <td>
+                            <%= user.username %>
+                        </td>
+                        <td>
+                            <%= user.password %>
+                        </td>
+                        <td>
+                            <%= user.name %>
+                        </td>
+                        <td class="d-print-none">
+                            <a class="btn btn-sm btn-warning" href="/edit/<%= user.id %>">Edit</a>
+                            <a class="btn btn-sm btn-danger" href="/delete/<%= user.id %>">Delete</a>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <%- include("_footer") -%>
