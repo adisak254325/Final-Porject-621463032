@@ -1,11 +1,11 @@
 <%- include("_header") -%>
 <div class="m-3">
-    <h1>Data of User</h1>
+    <h1>Data</h1>
     <div class="text-end">
     <a class="btn btn-sm btn-success mb-2" href="/create">Add</a></div>
     <div class="table-responsive-sm">
         <table class="table table-hover">
-            <thead class="table-dark">
+            <thead class="table-light">
                 <tr class="text-center">
                     <th>ID</th>
                     <th>USERNAME</th>
@@ -30,8 +30,8 @@
                             <%= user.name %>
                         </td>
                         <td class="d-print-none">
-                            <a class="btn btn-sm btn-warning" href="/edit/<%= user.id %>">Edit</a>
-                            <a class="btn btn-sm btn-danger" href="/delete/<%= user.id %>">Delete</a>
+                            <a class="btn btn-sm btn-primary" href="/edit/<%= user.id %>">Edit</a>
+                            <a class="btn btn-sm btn-warning" href="/delete/<%= user.id %>">Delete</a>
                         </td>
                     </tr>
                     <% } %>
