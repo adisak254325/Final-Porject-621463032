@@ -87,14 +87,14 @@ video {
 }
 
 .background__red {
-  background-color: #f6484a;
+  background-color: #2e25a4;
 }
 
 .main__right {
   display: flex;
   flex-direction: column;
   flex: 0.3;
-  background-color: #597b48;
+  background-color: #f1f5ef;
 }
 
 .main__chat_window {
